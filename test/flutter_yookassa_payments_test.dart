@@ -1,23 +1,7 @@
-import 'package:flutter/services.dart';
-import 'package:flutter_test/flutter_test.dart';
-import 'package:flutter_yookassa_payments/flutter_yookassa_payments.dart';
+// import 'package:flutter/services.dart';
+// import 'package:flutter_test/flutter_test.dart';
+// import 'package:flutter_yookassa_payments/flutter_yookassa_payments.dart';
 
-void main() {
-  const MethodChannel channel = MethodChannel('flutter_yookassa_payments');
-
-  TestWidgetsFlutterBinding.ensureInitialized();
-
-  setUp(() {
-    channel.setMockMethodCallHandler((MethodCall methodCall) async {
-      return '42';
-    });
-  });
-
-  tearDown(() {
-    channel.setMockMethodCallHandler(null);
-  });
-
-  test('getPlatformVersion', () async {
-    expect(await FlutterYookassaPayments.platformVersion, '42');
-  });
-}
+// void main() {
+//   const MethodChannel channel = MethodChannel('flutter_yookassa_payments');
+// }
