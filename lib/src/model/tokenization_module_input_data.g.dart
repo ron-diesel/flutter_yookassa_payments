@@ -14,6 +14,7 @@ TokenizationModuleInputData _$TokenizationModuleInputDataFromJson(
     purchaseDescription: json['purchaseDescription'] as String,
     amount: Amount.fromJson(json['amount'] as Map<String, dynamic>),
     savePaymentMethod: json['savePaymentMethod'] as String,
+    shopId: json['shopId'] as String,
     tokenizationSettings: TokenizationSettings.fromJson(
         json['tokenizationSettings'] as Map<String, dynamic>),
   );
@@ -27,5 +28,6 @@ Map<String, dynamic> _$TokenizationModuleInputDataToJson(
       'purchaseDescription': instance.purchaseDescription,
       'amount': instance.amount.toJson(),
       'savePaymentMethod': instance.savePaymentMethod,
+      'shopId': instance.shopId,
       'tokenizationSettings': instance.tokenizationSettings.toJson(),
     };

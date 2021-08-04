@@ -1,5 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.flutter_yookassa_payments_example">
+
    <application
         android:label="flutter_yookassa_payments_example"
         android:icon="@mipmap/ic_launcher">

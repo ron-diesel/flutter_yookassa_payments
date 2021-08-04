@@ -11,7 +11,9 @@ class TokenizationModuleInputData {
   final String purchaseDescription;
   final Amount amount;
   final String savePaymentMethod;
+  final String shopId;
   final TokenizationSettings tokenizationSettings;
+
 
   const TokenizationModuleInputData({
     required this.clientApplicationKey,
@@ -19,6 +21,7 @@ class TokenizationModuleInputData {
     required this.purchaseDescription,
     required this.amount,
     required this.savePaymentMethod,
+    required this.shopId,
     this.tokenizationSettings = const TokenizationSettings(),
   });
 

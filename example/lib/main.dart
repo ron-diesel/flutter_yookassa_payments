@@ -34,9 +34,9 @@ class _MyAppState extends State<MyApp> {
               TextButton(
                 onPressed: () async {
                   final clientApplicationKey =
-                      'YOUR_CLIENT_KEY';
-                  final shopName = 'YOUR_SHOP_NAME';
-                  final purchaseDescription = 'PURCHASE_NAME';
+                      'test_NzkxMjAyOuwoQvAL05i8dH3PKX66eL-iT7wMMQHCZmk';
+                  final shopName = 'Test, 768482';
+                  final purchaseDescription = 'Поездка';
 
                   final amount = Amount(value: 1, currency: Currency.rub);
 
@@ -44,12 +44,14 @@ class _MyAppState extends State<MyApp> {
                       paymentMethodTypes: PaymentMethodTypes.bankCard);
 
                   final inputData = TokenizationModuleInputData(
-                      clientApplicationKey: clientApplicationKey,
-                      shopName: shopName,
-                      purchaseDescription: purchaseDescription,
-                      savePaymentMethod: 'on',
-                      amount: amount,
-                      tokenizationSettings: tokenizationSettings);
+                    clientApplicationKey: clientApplicationKey,
+                    shopName: shopName,
+                    purchaseDescription: purchaseDescription,
+                    savePaymentMethod: 'on',
+                    amount: amount,
+                    tokenizationSettings: tokenizationSettings,
+                    shopId: '768482',
+                  );
 
                   final token =
                       await FlutterYookassaPayments.checkout(inputData);

@@ -6,11 +6,13 @@ buildscript {
     repositories {
         google()
         jcenter()
+
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:4.1.0'
+        classpath 'com.android.tools.build:gradle:7.0.0'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+
     }
 }
 
@@ -18,6 +20,11 @@ rootProject.allprojects {
     repositories {
         google()
         jcenter()
+        mavenCentral()
+        flatDir {
+            dirs('../libs')
+        }
+
     }
 }
 
@@ -31,10 +38,12 @@ android {
         main.java.srcDirs += 'src/main/kotlin'
     }
     defaultConfig {
-        minSdkVersion 16
+        minSdkVersion 21
     }
 }
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'ru.yoomoney.sdk.kassa.payments:yookassa-android-sdk:6.1.4'
+    files(name: 'ThreatMetrix Android SDK 5.4-73', ext: 'aar')
 }
